@@ -18,9 +18,10 @@ for (var x = 0; x < tx.length; x++) {
   var tx_atta = tx[x].getAttachments().toArray();
 
   for (var y = 0; y<tx_atta.length; y++) {
+
     if (tx_type = "Correspondence" && /CI:\s/i.test(tx_atta[y].getContent())) {
-	  ticketContents += tx_atta[y].getContent()+"\n";
-	}
+    ticketContents += tx_atta[y].getContent()+"\n";
+  }
   }
 }
 
@@ -34,15 +35,15 @@ if (ticketContents) {
   for( var i = 0; i < dataArray.length; ++i ) {
     var tempCI = ciRegex.exec(dataArray[i]);
     tempCI = tempCI[1];
-  	
+    
     var tempStartDate = startDateRegex.exec(dataArray[i]);
     tempStartDate = tempStartDate[1];
 
     var tempStartTime = startTimeRegex.exec(dataArray[i]);
     tempStartTime = tempStartTime[1];
 
-    var tempEndDate = endDateRegex.exec(dataArray[i]);
-    tempEndDate = tempEndDate[1];
+   var tempEndDate = endDateRegex.exec(dataArray[i]);
+   tempEndDate = tempEndDate[1];
 
     var tempEndTime = endTimeRegex.exec(dataArray[i]);
     tempEndTime = tempEndTime[1];
