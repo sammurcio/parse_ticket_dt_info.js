@@ -47,7 +47,7 @@ if (ticketContents) {
     var tempEndTime = endTimeRegex.exec(dataArray[i]);
     tempEndTime = tempEndTime[1];
 
-    var tempEntry = tempCI + ",UTC," + tempStartDate + "," + tempStartTime + "," + tempEndDate + "," + tempEndDate + "\n";
+    var tempEntry = tempCI + ",UTC," + tempStartDate + "," + tempStartTime + "," + tempEndDate + "," + tempEndTime + "\n";
 
     csv += tempEntry;
     }
